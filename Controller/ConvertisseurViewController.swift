@@ -50,7 +50,7 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
             presentAlert(with: "Veuillez indiquer un nombre ou un chiffre")
         }
         let textField = Float(textField.text!)
-        text = textField ?? 0.0 * currentRate
+        text = (textField ?? 0.0) * currentRate
         
         let result = String(text!)
         usd.text = result
