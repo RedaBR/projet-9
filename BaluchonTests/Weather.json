@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": 5.9333,
+        "lat": 43.1167
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 285.52,
+        "feels_like": 283.94,
+        "temp_min": 284.64,
+        "temp_max": 287.59,
+        "pressure": 1024,
+        "humidity": 43
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.54,
+        "deg": 330
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1648195747,
+    "sys": {
+        "type": 2,
+        "id": 2009369,
+        "country": "FR",
+        "sunrise": 1648186258,
+        "sunset": 1648230808
+    },
+    "timezone": 3600,
+    "id": 2972328,
+    "name": "Toulon",
+    "cod": 200
+}
