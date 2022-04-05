@@ -66,7 +66,7 @@ class WeatherServiceTestCase: XCTestCase {
         XCTAssertNotNil(data)
         expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 7)
+        wait(for: [expectation], timeout: 5)
     }
     
     func testGetExchangeShouldPostFailedCallbackIfIncorrectData() {
