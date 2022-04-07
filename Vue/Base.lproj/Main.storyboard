@@ -350,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-Oa-9RX">
-                                <rect key="frame" x="250.99999999999997" y="582.66666666666663" width="41.666666666666657" height="62"/>
+                                <rect key="frame" x="251.33333333333337" y="582.66666666666663" width="41.333333333333343" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="AkH-aK-bCY"/>
                                 </constraints>
@@ -413,10 +413,9 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwi-Nm-zTa">
-                                <rect key="frame" x="182" y="105.66666666666669" width="192" height="77"/>
+                                <rect key="frame" x="332.66666666666669" y="105.66666666666669" width="41.333333333333314" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="Gf3-s7-8d6"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="v91-sX-hKk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -424,7 +423,6 @@
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <mask key="constraints">
                                         <exclude reference="Gf3-s7-8d6"/>
-                                        <exclude reference="v91-sX-hKk"/>
                                     </mask>
                                 </variation>
                             </label>
