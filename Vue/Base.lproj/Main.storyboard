@@ -289,7 +289,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iv-VX-G1o">
-                                <rect key="frame" x="376" y="121.33333333333333" width="17" height="20.333333333333329"/>
+                                <rect key="frame" x="376" y="121.33333333333331" width="17" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="t9G-y5-cCQ"/>
                                 </constraints>
@@ -350,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-Oa-9RX">
-                                <rect key="frame" x="251.33333333333337" y="582.66666666666663" width="41.333333333333343" height="62"/>
+                                <rect key="frame" x="250.99999999999997" y="582.66666666666663" width="41.666666666666657" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="AkH-aK-bCY"/>
                                 </constraints>
@@ -364,7 +364,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-k2-4wu">
-                                <rect key="frame" x="0.0" y="160" width="93" height="20.333333333333343"/>
+                                <rect key="frame" x="0.0" y="160" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="tcw-Pc-mdh"/>
                                 </constraints>
