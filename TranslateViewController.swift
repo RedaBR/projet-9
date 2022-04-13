@@ -16,13 +16,14 @@ class TranslateViewController: UIViewController, UITextFieldDelegate {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
         
         self.textFr.delegate = self
+       self.textEn.delegate = self
     }
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let textToTranslate = textFr.text!
         TranslateService(session: URLSession(configuration: .default)).getTranslate(text: textToTranslate) { (data, success) in
             if success == true {
@@ -30,10 +31,13 @@ class TranslateViewController: UIViewController, UITextFieldDelegate {
                 
             }
         }
-        
+        textField.resignFirstResponder()
         return true
+    
     }
     
+    
+     
 }
 
 

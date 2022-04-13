@@ -18,7 +18,7 @@ class WeatherServiceTestCase: XCTestCase {
        
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        weather.weather(city:"erreur") { (success, data, error) in
+        weather.weather(city:"erreur") { (success, data) in
             // Then
             XCTAssertFalse(success)
             XCTAssertNil(data)
@@ -38,7 +38,7 @@ class WeatherServiceTestCase: XCTestCase {
        
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        weather.weather(city:""){(success, data, error)in
+        weather.weather(city:""){(success, data)in
         
         // Then
         XCTAssertFalse(success)
@@ -58,7 +58,7 @@ class WeatherServiceTestCase: XCTestCase {
        
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        weather.weather(city:"Toulon") {(success, data, error)in
+        weather.weather(city:"Toulon") {(success, data)in
         
         // Then
 
@@ -77,7 +77,7 @@ class WeatherServiceTestCase: XCTestCase {
        
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        weather.weather(city:"Toulon") {(success, data, error)in
+        weather.weather(city:"Toulon") {(success, data)in
         
         // Then
         XCTAssertFalse(success)
@@ -95,7 +95,7 @@ class WeatherServiceTestCase: XCTestCase {
         
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        weather.weather(city:"Toulon") {(succes, data, error)in
+        weather.weather(city:"Toulon") {(succes, data)in
         
         // Then
         XCTAssertTrue((succes != nil))

@@ -22,7 +22,7 @@ class HaveWeather {
     
     private init() { }
     
-    func weather (city:String, callback: @escaping (Bool, WheaterData?, Error?)->Void) {
+    func weather (city:String, callback: @escaping (Bool, WheaterData?)->Void) {
         let urlString = baseUrlString + "?q=" + city + "&appid=" + appId
         let url = URL(string: urlString)
 
@@ -32,18 +32,19 @@ class HaveWeather {
         task = session.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async{
                 if let data = data, error == nil  {
-                    if let response = response as? HTTPURLResponse, response.statusCode == 200 {
                         do {
-                            let rates = try JSONDecoder().decode(WheaterData.self, from:data)
-                            callback(true, rates, nil)
+                            let weather = try JSONDecoder().decode(WheaterData.self, from:data)
+                            callback(true, weather)
                         }
                         catch {
                             print("Task error", error.localizedDescription)
-                            callback(false, nil, error)
+                            callback(false, nil)
                         }
-                    }
                     
+                } else {
+                    callback(false,nil)
                 }
+                
 
             }
         }

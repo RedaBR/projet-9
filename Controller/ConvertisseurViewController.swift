@@ -54,7 +54,8 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
         
         let result = String(text!)
         usd.text = result
-
+        
+        eur.resignFirstResponder()
         return true
     }
 

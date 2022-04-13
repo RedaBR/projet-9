@@ -28,7 +28,7 @@ class MeteoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Baluchon.HaveWeather.shared.weather(city:"Toulon", callback: {(success, meteo,error) in
+        Baluchon.HaveWeather.shared.weather(city:"Toulon", callback: {(success, meteo) in
             self.main.text = meteo?.weather.first?.main
             let iconString = meteo?.weather.first?.icon
             let temperature = meteo?.main.temp
@@ -48,7 +48,7 @@ class MeteoViewController: UIViewController {
         
         
         
-        HaveWeather.shared.weather(city:"washington", callback: { (succes,meteo,error) in
+        HaveWeather.shared.weather(city:"washington", callback: { (succes,meteo) in
             self.main2.text = meteo?.weather.first?.main
             let iconString = meteo?.weather.first?.icon
             let temperature2 = meteo?.main.temp
