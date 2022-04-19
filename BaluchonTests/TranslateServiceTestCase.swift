@@ -78,7 +78,7 @@ class TranslateServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-    func testTranslationQuoteShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+    func testTranslationShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         let translatedText = "the big tower"
         // Given
         let translate = TranslateService(session:URLSessionFake(data:FakeResponseDate().correctTranslateData, error:nil, response:FakeResponseDate().responseOK))
@@ -97,4 +97,6 @@ class TranslateServiceTestCase: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.01)
     }
+    
+
 }

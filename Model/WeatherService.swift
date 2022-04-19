@@ -68,24 +68,7 @@ class HaveWeather {
         }
     
     
-    //func getTemp (city:String, completionHandler: @escaping ((Data)->Void)) {
-       // let urlString = baseUrlString + "?q=" + city + "&appid=" + appId
-       // let tempUrl = URL(string: urlString)
-       // let session = URLSession(configuration: .default)
-        //let task = session.dataTask(with:tempUrl! ) { (data, response, error) in
-            //DispatchQueue.main.async {
-               // if let data = data, error == nil {
-                   // if let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                       // completionHandler(data)
-                        
-                    //}
-               // }
-           // }
-            
-        //}
-      //  task.resume()
-    //}
-    
+
     func getWheaterIconUrl (icon:String)->URL {
         // http://openweathermap.org/img/wn/10d@2x.png
         
