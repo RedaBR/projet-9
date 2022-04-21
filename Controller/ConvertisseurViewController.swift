@@ -19,6 +19,8 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.eur.delegate = self
+        
+      
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -76,8 +78,11 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
      
 
     }
-   
     
+  
+  
+    
+  
 }
     
 
