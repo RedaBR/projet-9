@@ -16,6 +16,7 @@ class MeteoViewController: UIViewController {
     
     @IBOutlet weak var image2: UIImageView!
     
+   
     
     @IBOutlet weak var main2: UILabel!
     
@@ -26,8 +27,44 @@ class MeteoViewController: UIViewController {
     @IBOutlet weak var temp2: UILabel!
     
     
+    @IBOutlet weak var activityController: UIActivityIndicatorView!
+    
+    func loading () {
+        activityController.isHidden = false
+        main.isHidden = true
+        image1.isHidden = true
+        temp1.isHidden = true
+        
+        main2.isHidden = true
+        image2.isHidden = true
+        temp2.isHidden = true
+        
+    }
+    
+    func load () {
+        activityController.isHidden = true
+        main.isHidden = false
+        image1.isHidden = false
+        temp1.isHidden = false
+        
+        main2.isHidden = false
+        image2.isHidden = false
+        temp2.isHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loading()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        load()
+    }
+    
     override func viewDidLoad() {
+    
         super.viewDidLoad()
+        
+        
         Baluchon.HaveWeather.shared.weather(city:"Toulon", callback: {(success, meteo) in
             self.main.text = meteo?.weather.first?.main
             let iconString = meteo?.weather.first?.icon

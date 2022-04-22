@@ -515,6 +515,10 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ouV-sM-cUQ">
+                                <rect key="frame" x="120" y="108" width="189" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mb8-3j-ivA"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -725,6 +729,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" id="rcY-E6-X6t"/>
                     <connections>
+                        <outlet property="activityController" destination="ouV-sM-cUQ" id="bYB-NG-Tgv"/>
                         <outlet property="image1" destination="JnS-B9-WNh" id="M2u-V4-FlH"/>
                         <outlet property="image2" destination="HeG-IU-PPZ" id="gUz-EG-pbj"/>
                         <outlet property="main" destination="NWq-k2-4wu" id="893-3o-PDw"/>
@@ -735,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g16-or-ycS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210.1449275362319" y="-598.36956521739137"/>
+            <point key="canvasLocation" x="208.87850467289718" y="-598.70410367170632"/>
         </scene>
         <!--Menu-->
         <scene sceneID="c0g-4g-Vyh">
