@@ -102,6 +102,10 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vhu-wt-c8S">
+                                <rect key="frame" x="182" y="407" width="65" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z5K-B6-eG9"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -208,13 +212,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="translator " id="N7I-dH-yQu"/>
                     <connections>
+                        <outlet property="activityController" destination="vhu-wt-c8S" id="U07-Dh-e4K"/>
                         <outlet property="textEn" destination="WHc-Tl-3N9" id="NKi-a1-irA"/>
                         <outlet property="textFr" destination="Va5-p6-hql" id="mgO-VS-rME"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgI-aS-Sfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230.66954643628512" y="782.24299065420553"/>
+            <point key="canvasLocation" x="229.90654205607476" y="782.07343412527007"/>
         </scene>
         <!--Convertir-->
         <scene sceneID="SXF-QQ-IkE">

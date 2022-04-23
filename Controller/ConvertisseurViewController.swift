@@ -32,12 +32,12 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
     func updateChangeRate() {
         ExchangeService.shared.getRate { [self] (Exchange, success) in
 
-            if success == false {
-                
+            if success == true {
+                currentRate = (Exchange?.rates.USD)!
             } else {
-                
+                return
             }
-            currentRate =  (Exchange?.rates.USD)!
+            
         }
     }
     
