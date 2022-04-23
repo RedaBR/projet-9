@@ -109,6 +109,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z5K-B6-eG9"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="WHc-Tl-3N9" firstAttribute="leading" secondItem="Z5K-B6-eG9" secondAttribute="leading" constant="20" id="2qo-EW-hDj"/>
                             <constraint firstItem="Z5K-B6-eG9" firstAttribute="bottom" secondItem="Y1S-AV-eid" secondAttribute="bottom" constant="338" id="5ff-HU-2Lo"/>
@@ -209,6 +210,9 @@
                                 <include reference="vzt-Uf-L8E"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ag4-E7-DVH" appends="YES" id="shg-n6-12c"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="translator " id="N7I-dH-yQu"/>
                     <connections>
@@ -218,6 +222,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgI-aS-Sfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ag4-E7-DVH">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="bPQ-TW-hUx" id="0A0-tu-d2e"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="229.90654205607476" y="782.07343412527007"/>
         </scene>
@@ -279,10 +288,15 @@
                                     <constraint firstAttribute="height" constant="34" id="qxs-yj-bzF"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="R9L-nx-OvE">
+                                <rect key="frame" x="184" y="349" width="66" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sg7-6U-1qX"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <color key="tintColor" red="0.61531051459999997" green="1" blue="0.61920060769999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="yNy-ZG-KgE" firstAttribute="top" secondItem="qra-Zk-9tQ" secondAttribute="top" id="0px-Mr-M6S"/>
                             <constraint firstItem="IQs-xN-UG7" firstAttribute="leading" secondItem="sg7-6U-1qX" secondAttribute="leading" constant="20" id="7Hl-mw-iMP"/>
@@ -371,16 +385,25 @@
                                 <include reference="s2Q-WN-VlZ"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9sV-dR-PM8" appends="YES" id="sRa-5Z-Wjn"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exchange" id="l3t-3v-ApO"/>
                     <connections>
+                        <outlet property="activityController" destination="R9L-nx-OvE" id="8lu-Sy-gJM"/>
                         <outlet property="eur" destination="qra-Zk-9tQ" id="j9p-M9-S98"/>
                         <outlet property="usd" destination="IQs-xN-UG7" id="2Fk-um-gZg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8e-E6-M8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9sV-dR-PM8">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="2rN-uk-Nrq" id="zo8-xO-An9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="211.87904967602594" y="68.691588785046719"/>
+            <point key="canvasLocation" x="211.6822429906542" y="68.682505399568043"/>
         </scene>
         <!--Meteo-->
         <scene sceneID="hqA-uv-SKb">

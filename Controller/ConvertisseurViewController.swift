@@ -13,6 +13,15 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
    
     @IBOutlet weak var usd: UITextField!
     
+    
+    @IBOutlet weak var activityController: UIActivityIndicatorView!
+    
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        
+        eur.resignFirstResponder()
+    }
+    
     var currentRate = Float()
     
     override func viewDidLoad() {
@@ -33,6 +42,8 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
         ExchangeService.shared.getRate { [self] (Exchange, success) in
 
             if success == true {
+            
+
                 currentRate = (Exchange?.rates.USD)!
             } else {
                 return
@@ -40,6 +51,7 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
+     
     
     
     
@@ -51,13 +63,13 @@ class ConvertisseurViewController: UIViewController, UITextFieldDelegate {
         if text == nil {
             presentAlert(with: "Veuillez indiquer un nombre ou un chiffre")
         }
+        
         let textField = Float(textField.text!)
         text = (textField ?? 0.0) * currentRate
-        
         let result = String(text!)
         usd.text = result
-        
         eur.resignFirstResponder()
+        activityController.isHidden = true
         return true
     }
 

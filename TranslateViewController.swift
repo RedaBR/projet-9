@@ -16,6 +16,13 @@ class TranslateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textEn: UITextField!
     
     
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        textFr.resignFirstResponder()
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
        super.viewDidLoad()
         
