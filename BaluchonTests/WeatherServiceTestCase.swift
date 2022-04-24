@@ -104,6 +104,24 @@ class WeatherServiceTestCase: XCTestCase {
         }
         wait(for: [expectation], timeout: 5)
     }
+    
+    func estExchangeQuoteShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+        
+        // Given
+        let weather = HaveWeather.shared
+        weather.session = URLSessionFake(data: FakeResponseDate().correctWeatherData, error: nil, response: FakeResponseDate().responseOK)
+        
+        // When
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        weather.getImage(iconString: "01d") { (data) in
+            
+            XCTAssertNotNil(data)
+            expectation.fulfill()
+        }
+            
+          
+        wait(for: [expectation], timeout: 5)
+    }
 }
 
 

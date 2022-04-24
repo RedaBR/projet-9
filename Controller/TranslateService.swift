@@ -8,7 +8,6 @@
 import Foundation
 class TranslateService {
     private init() {
-        
     }
     static var shared =  TranslateService() 
     var session = URLSession(configuration: .default)
@@ -17,11 +16,9 @@ class TranslateService {
         self.session = session
     }
     //url = "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCV6W0tPgrYrJ0G7o7xjoFtkks2ir-ZFHs&q=The"
-    
     let baseUrl = "https://translation.googleapis.com/language/translate/v2"
     let apiKey = "AIzaSyCV6W0tPgrYrJ0G7o7xjoFtkks2ir-ZFHs"
     let endUrl = "&source=fr&target=en&format=text"
-    
     func getTranslate(text : String?, callback: @escaping(TranslateData?,Bool)->Void) {
         let url = getUrl(text: text ?? "Veuillez inserer")
         var request = URLRequest(url: url)
@@ -41,20 +38,15 @@ class TranslateService {
                     callback(nil,false)
                 }
             }
-            
         }
         task.resume()
     }
-    
     func getUrl(text:String)->URL {
-
+        
         let originalString = baseUrl + "?key=" + apiKey + "&q=" + text + endUrl
         let urlString = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: urlString!)
         return url!
-        
     }
-    
-    
 }
 
