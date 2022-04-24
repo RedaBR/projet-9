@@ -11,7 +11,7 @@ import XCTest
 
 class WeatherServiceTestCase: XCTestCase {
     
-    func testGetExchangeShouldPostFailedCallbackIfError() {
+    func testWeatherShouldPostFailedCallbackIfError() {
         // Given
         let weather = HaveWeather.shared
         weather.session = URLSessionFake(data: nil, error: FakeResponseDate.error, response: nil)
@@ -31,7 +31,7 @@ class WeatherServiceTestCase: XCTestCase {
     
     
     
-    func testGetExchangeShouldPostFailedCallbackIfNoData() {
+    func testWeatherShouldPostFailedCallbackIfNoData() {
         // Given
         let weather = HaveWeather.shared
         weather.session = URLSessionFake(data: nil, error: nil, response: nil)
@@ -51,7 +51,7 @@ class WeatherServiceTestCase: XCTestCase {
     
     
     
-    func testGetExchangeShouldPostFailedCallbackIfIncorrectResponse() {
+    func testGetWeatherShouldPostFailedCallbackIfIncorrectResponse() {
         // Given
         let weather = HaveWeather.shared
         weather.session = URLSessionFake(data: FakeResponseDate().correctWeatherData, error: nil, response: FakeResponseDate().responseKO)
@@ -69,7 +69,7 @@ class WeatherServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
-    func testGetExchangeShouldPostFailedCallbackIfIncorrectData() {
+    func testWeatherShouldPostFailedCallbackIfIncorrectData() {
         
         // Given
         let weather = HaveWeather.shared
@@ -87,7 +87,7 @@ class WeatherServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
-    func testExchangeQuoteShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+    func testWeatherShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         
         // Given
         let weather = HaveWeather.shared
@@ -105,7 +105,7 @@ class WeatherServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
-    func estExchangeQuoteShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+    func testWeatherImage() {
         
         // Given
         let weather = HaveWeather.shared

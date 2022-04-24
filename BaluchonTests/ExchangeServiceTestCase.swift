@@ -85,7 +85,7 @@ class ExchangeServiceTestCase: XCTestCase {
             wait(for: [expectation], timeout: 2)
         }
         
-        func testExchangeQuoteShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+        func testExchangeShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
     
             // Given
             let exchange = ExchangeService.shared
