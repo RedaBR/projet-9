@@ -7,6 +7,10 @@
 
 import Foundation
 class TranslateService {
+    private init() {
+        
+    }
+    static var shared =  TranslateService() 
     var session = URLSession(configuration: .default)
     var task = URLSessionTask()
     init(session:URLSession) {

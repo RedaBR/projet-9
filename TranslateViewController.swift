@@ -32,11 +32,11 @@ class TranslateViewController: UIViewController, UITextFieldDelegate {
     
     
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            activityController.isHidden = false
+        activityController.isHidden = false
         let textToTranslate = textFr.text!
-        TranslateService(session: URLSession(configuration: .default)).getTranslate(text: textToTranslate) { (data, success) in
+            TranslateService.shared.getTranslate(text: textToTranslate) { (data, success) in
             if success == true {
-                self.activityController.isHidden = true
+            self.activityController.isHidden = true
                 self.textEn.text = data?.data.translations.first?.translatedText
                 
             }
