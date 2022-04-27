@@ -39,18 +39,22 @@ class MeteoViewController: UIViewController {
         super.viewDidLoad()
         loading()
         Baluchon.HaveWeather.shared.weather(city:"Toulon", callback: {(success, meteo) in
+
             self.main.text = meteo?.weather.first?.main
             let iconString = meteo?.weather.first?.icon
             let temperature = meteo?.main.temp
+                
             Baluchon.HaveWeather.shared.getImage(iconString: iconString!, completionHandler: { [self] (iconData) in
                 if (iconData != nil) {
                     self.image1.image = UIImage.init(data: iconData!)
                     let ConvertTempInString = String(temperature!)
                     temp1.text = ConvertTempInString
                 }
+            
                 load()
             })
         })
+        
         HaveWeather.shared.weather(city:"New York Mills", callback: { (succes,meteo) in
             self.main2.text = meteo?.weather.first?.main
             let iconString = meteo?.weather.first?.icon

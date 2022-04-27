@@ -27,10 +27,19 @@ class TranslateViewController: UIViewController, UITextFieldDelegate {
             if success == true {
                 self.activityController.isHidden = true
                 self.textEn.text = data?.data.translations.first?.translatedText
+            } else if success == false {
+                self.presentAlert(with: "Veuillez vérifier l'état de votre réseau")
             }
         }
         textField.resignFirstResponder()
         return true
+    }
+    
+    func presentAlert(with error: String) {
+        let alert = UIAlertController(title: "Erreur", message: error, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }
 
