@@ -527,7 +527,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iv-VX-G1o">
-                                <rect key="frame" x="288" y="222.66666666666669" width="37" height="46.999999999999972"/>
+                                <rect key="frame" x="288" y="222.66666666666666" width="37" height="46.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7iv-VX-G1o" secondAttribute="height" multiplier="37:47" id="glS-9N-IRt"/>
                                 </constraints>
